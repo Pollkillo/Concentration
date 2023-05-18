@@ -8,7 +8,7 @@
 import UIKit
 
 
-class LoginVC: UIViewController {
+class LoginViewController: UIViewController {
     
     //MARK: Private Property
     private let loginTF = RegisterTextField(placeholder: "Login")
@@ -58,7 +58,7 @@ class LoginVC: UIViewController {
 }
 
 //MARK: - Setting View
-private extension LoginVC {
+private extension LoginViewController {
     
     func setupView(){
         view.backgroundColor = .white
@@ -71,7 +71,7 @@ private extension LoginVC {
 }
 
 //MARK: - Setting
-private extension LoginVC {
+private extension LoginViewController {
     func addSubviews(){
         view.addSubview(loginTF)
         view.addSubview(passwordTF)
@@ -97,7 +97,7 @@ private extension LoginVC {
 }
 
 //MARK: - Layout
-private extension LoginVC {
+private extension LoginViewController {
     func setupLayout(){
         loginTF.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -125,7 +125,7 @@ private extension LoginVC {
     }
 }
 
-extension LoginVC: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         guard let text = textField.text else { return }
         eyeButton.isEnabled = !text.isEmpty
@@ -142,7 +142,7 @@ extension LoginVC: UITextFieldDelegate {
 }
 
 // Keyboard
-extension LoginVC: UIScrollViewDelegate {
+extension LoginViewController: UIScrollViewDelegate {
     func initializeHideKeyboard(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
         view.addGestureRecognizer(tap)
