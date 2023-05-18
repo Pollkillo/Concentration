@@ -19,8 +19,8 @@
 		32ED37E12A0AE36500C25BA3 /* ConcentrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37E02A0AE36500C25BA3 /* ConcentrationUITests.swift */; };
 		32ED37E32A0AE36500C25BA3 /* ConcentrationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37E22A0AE36500C25BA3 /* ConcentrationUITestsLaunchTests.swift */; };
 		32ED37F02A0AF84700C25BA3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37EF2A0AF84700C25BA3 /* Networking.swift */; };
-		32ED37F22A0B016E00C25BA3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37F12A0B016E00C25BA3 /* Model.swift */; };
-		32ED37F72A0B0CD500C25BA3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37F62A0B0CD500C25BA3 /* Login.swift */; };
+		32ED37F22A0B016E00C25BA3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37F12A0B016E00C25BA3 /* User.swift */; };
+		32ED37F72A0B0CD500C25BA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37F62A0B0CD500C25BA3 /* LoginViewController.swift */; };
 		32ED37F92A0B16FB00C25BA3 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37F82A0B16FB00C25BA3 /* RegisterTextField.swift */; };
 		32ED37FB2A0B1EBC00C25BA3 /* EyeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37FA2A0B1EBC00C25BA3 /* EyeButton.swift */; };
 		32ED37FD2A0C526300C25BA3 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ED37FC2A0C526300C25BA3 /* SignUpButton.swift */; };
@@ -61,8 +61,8 @@
 		32ED37E02A0AE36500C25BA3 /* ConcentrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationUITests.swift; sourceTree = "<group>"; };
 		32ED37E22A0AE36500C25BA3 /* ConcentrationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		32ED37EF2A0AF84700C25BA3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		32ED37F12A0B016E00C25BA3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		32ED37F62A0B0CD500C25BA3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		32ED37F12A0B016E00C25BA3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32ED37F62A0B0CD500C25BA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		32ED37F82A0B16FB00C25BA3 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
 		32ED37FA2A0B1EBC00C25BA3 /* EyeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButton.swift; sourceTree = "<group>"; };
 		32ED37FC2A0C526300C25BA3 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		32ED37F42A0B018100C25BA3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				32ED37F12A0B016E00C25BA3 /* Model.swift */,
+				32ED37F12A0B016E00C25BA3 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				32ED37FE2A0C526900C25BA3 /* LoginElemets */,
-				32ED37F62A0B0CD500C25BA3 /* Login.swift */,
+				32ED37F62A0B0CD500C25BA3 /* LoginViewController.swift */,
 			);
 			path = LoginFlow;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32ED37F92A0B16FB00C25BA3 /* RegisterTextField.swift in Sources */,
-				32ED37F72A0B0CD500C25BA3 /* Login.swift in Sources */,
+				32ED37F72A0B0CD500C25BA3 /* LoginViewController.swift in Sources */,
 				32ED37C12A0AE36300C25BA3 /* ViewController.swift in Sources */,
 				325C2BF72A0C5F6500BA04C1 /* extension.swift in Sources */,
 				32ED38022A0C53F600C25BA3 /* Registration.swift in Sources */,
@@ -333,7 +333,7 @@
 				32ED37FD2A0C526300C25BA3 /* SignUpButton.swift in Sources */,
 				32ED37F02A0AF84700C25BA3 /* Networking.swift in Sources */,
 				32ED37C72A0AE36300C25BA3 /* Concentration.xcdatamodeld in Sources */,
-				32ED37F22A0B016E00C25BA3 /* Model.swift in Sources */,
+				32ED37F22A0B016E00C25BA3 /* User.swift in Sources */,
 				32ED37BD2A0AE36300C25BA3 /* AppDelegate.swift in Sources */,
 				32ED37BF2A0AE36300C25BA3 /* SceneDelegate.swift in Sources */,
 				32ED37FB2A0B1EBC00C25BA3 /* EyeButton.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  Login.swift
+//  LoginViewController.swift
 //  Concentration
 //
 //  Created by Vahe Bazikyan on 10.05.2023.
@@ -21,13 +21,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         initializeHideKeyboard()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToNotification(UIResponder.keyboardWillShowNotification, selector: #selector(keyboardWillShow))
-        //Subscribe to a Notification which will fire before the keyboard will hide
         subscribeToNotification(UIResponder.keyboardWillHideNotification, selector: #selector(keyboardWillHide))
     }
     
@@ -35,10 +33,7 @@ class LoginViewController: UIViewController {
         super.viewWillDisappear(animated)
         unsubscribeFromAllNotifications()
     }
-    
-    //MARK: - Private func
-    
-    
+
     //MARK: - Action
     @objc func touchEyeButton(){
         let imageName = isPrivate ? "eye" : "eye.slash"
@@ -53,7 +48,6 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
         //!!! add enter logic
     }
-    
     
 }
 
@@ -142,22 +136,23 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 // Keyboard
-extension LoginViewController: UIScrollViewDelegate {
+extension LoginViewController {
     func initializeHideKeyboard(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
         view.addGestureRecognizer(tap)
     }
     @objc func dismissMyKeyboard(){
         endEditing()
-        
     }
     
     func subscribeToNotification(_ notification: NSNotification.Name, selector: Selector) {
         NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
     }
+    
     func unsubscribeFromAllNotifications() {
         NotificationCenter.default.removeObserver(self)
     }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {

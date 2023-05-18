@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  User.swift
 //  Concentration
 //
 //  Created by Vahe Bazikyan on 10.05.2023.
@@ -18,6 +18,3 @@ struct User: Codable {
     var checkPassword: String
 }
 
-struct Users {
-    var users: [User]
-}
